@@ -1,0 +1,12 @@
+.tabs__button {
+    cursor: pointer;
+    &.active {
+        color: green;
+    }
+}
+.tabs__content {
+    display: none;
+    &.active {
+        display: block;
+    }
+}

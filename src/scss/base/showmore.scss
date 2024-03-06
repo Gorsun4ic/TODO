@@ -1,0 +1,18 @@
+#ch {
+    display: none;
+}
+#ch:checked ~ .content {
+    display: block;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+.content {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+}

@@ -1,0 +1,123 @@
+@use "sass:math";
+
+// Import mixins
+@import "base/mixins";
+
+// Import fonts from google fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+// Set general font
+$fontFamily: "Roboto";
+// Set general font size
+$fontSize: 16px;
+// Set general colors
+$mainColor: #000; // default text color
+// Min page width
+$minWidth: 320;
+// Template width
+$maxWidth: 1920;
+// The width of the restrictive container (0 = no restriction)
+$maxWidthContainer: 1170;
+// General container padding
+// (30 = 15px left and right, 0 = absence of backwardness)
+$containerPadding: 30;
+// ширина першої Breikpointa
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$pc: em($containerWidth); // PC, Laptops
+$tablet: em(991.98); // Tablets
+$mobile: em(767.98); // Large size phones
+$mobileSmall: em(479.98); // Small size phone
+
+// Responsive types:
+// 1 = responsive (without breakpoints),
+// 2 = breakpoints
+$responsiveType: 1;
+
+html {
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+    // Footer to bottom
+	> main {
+		flex: 1 1 auto;
+	}
+	// Fix to sliders
+	> * {
+		min-width: 0;
+	}
+}
+
+
+body {
+	// Scroll blocked
+	&._lock {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Page loaded
+	.loaded & {
+	}
+}
+
+@if ($responsiveType==1) {
+	// Responsive
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// Breakpoints
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+
+// Null
+@import "base/null";
+
+// Import components styles
+@import "base";
+
+// Import general project styles
+@import "common";
+
+// Import separates blocks styles
+@import "header";
+@import "footer";
+
+// Import separate pages styles
+@import "index";

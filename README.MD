@@ -42,16 +42,6 @@ To get started with the TODO List Application:
 
 Experience the TODO List Application in action by visiting the demo here: [Demo](https://github.com/Gorsun4ic/TODO/tree/main/src/files)
 
-## Why This Project Stands Out
-
-The TODO List Application is not just a simple to-do list; it’s a demonstration of effective task management, user-centric design, and modern web development practices. Whether you’re a recruiter evaluating potential candidates or a user looking for an efficient task manager, this project showcases a blend of practical functionality and aesthetic appeal.
-
-## Future Enhancements
-
-- **User Authentication**: Implement user login and registration for personalized task management.
-- **Mobile App Integration**: Extend functionality to mobile platforms for on-the-go task management.
-- **Advanced Task Features**: Introduce recurring tasks, priority levels, and reminders.
-
 ## Contact
 
 For any inquiries or further information, feel free to reach out:

@@ -38,6 +38,10 @@ To get started with the TODO List Application:
     ```
 3. **Open the Application**: Open `index.html` in your browser to start using the TODO List Application.
 
+## Demo
+
+Experience the TODO List Application in action by visiting the demo here: [Live Demo](https://github.com/Gorsun4ic/TODO/tree/main/src/files)
+
 ## Why This Project Stands Out
 
 The TODO List Application is not just a simple to-do list; it’s a demonstration of effective task management, user-centric design, and modern web development practices. Whether you’re a recruiter evaluating potential candidates or a user looking for an efficient task manager, this project showcases a blend of practical functionality and aesthetic appeal.

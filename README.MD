@@ -40,7 +40,7 @@ To get started with the TODO List Application:
 
 ## Demo
 
-Experience the TODO List Application in action by visiting the demo here: [Live Demo](https://github.com/Gorsun4ic/TODO/tree/main/src/files)
+Experience the TODO List Application in action by visiting the demo here: [Demo](https://github.com/Gorsun4ic/TODO/tree/main/src/files)
 
 ## Why This Project Stands Out
 

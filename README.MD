@@ -23,6 +23,7 @@ Welcome to the **TODO List Application**! This dynamic and user-friendly tool is
 - **JavaScript**: For interactive functionality and seamless user experience.
 - **HTML/CSS**: To structure and style the application, ensuring an aesthetically pleasing interface.
 - **Local Storage**: To persist task data across sessions.
+- **Gulp**: For task automation and build processes.
 
 ## Getting Started
 
@@ -36,7 +37,14 @@ To get started with the TODO List Application:
     ```bash
     cd TODO
     ```
-3. **Open the Application**: Open `index.html` in your browser to start using the TODO List Application.
+3. **Install Dependencies**: Run Gulp to install necessary dependencies and set up the project.
+    ```bash
+    npm install
+    ```
+4. **Open the Application**: Run gulp command  to start using the TODO List Application.
+    ```bash
+    gulp
+    ```
 
 ## Demo
 

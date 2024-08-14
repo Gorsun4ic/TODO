@@ -1,0 +1,7 @@
+input {
+	border-bottom: 1px solid grey;
+	min-width: 400px;
+	&:focus {
+		outline: none;
+	}
+}

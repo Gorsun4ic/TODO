@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/head.html', { "title": "Головна" })
+	@@include('html/head.html', { "title": "TODO List" })
 	<body>
 		<div class="wrapper">
 			@@include('html/header.html')
 			<main>
-				
+				<section class="todo">
+
+					<ul class="todo__list">
+					</ul>
+
+					<button class="todo__button">Add new task</button>
+				</section>
 			</main>
 			@@include('html/footer.html')
 		</div>

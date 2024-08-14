@@ -1,1 +1,127 @@
 // SCSS code for index.html page
+
+.todo {
+	background-color: #fff;
+	max-width: 650px;
+	padding: 32px;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 150px;
+	box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2);
+
+	&__list {
+		margin-bottom: 32px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 20px;
+
+		&.done {
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+				height: 1px;
+				background-color: #000;
+				z-index: 4;
+			}
+		}
+	}
+
+	&__controls {
+		display: none;
+		align-items: center;
+		gap: 8px;
+		margin-left: auto;
+
+		&.active {
+			display: flex;
+		}	
+	}
+
+	&__control {
+		width: 32px;
+		height: 32px;
+		padding: 6px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&::before {
+			content: "";
+			display: block;
+			background-size: contain;
+			background-position: center;
+			width: 16px;
+			height: 16px;
+			margin: 0 auto;
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(233deg) brightness(108%) contrast(101%);
+		}
+
+		&.check {
+			position: relative;
+			z-index: 5;
+			background-color: #4fc67b;
+			
+			&:hover {
+				background-color: #44aa6a;
+			}
+
+			&::before {
+				background-image: url("../img/check.svg");
+			}
+		}
+
+		&.edit {
+			background-color: #f5c021;
+
+			&:hover {
+					background-color: #ecb615;
+				}
+			&::before {
+				background-image: url("../img/pencil.svg");
+			}
+		}
+
+		&.delete {
+			background-color: #d61f1f;
+
+			&:hover {
+				background-color: #c31818;
+			}
+			&::before {
+				background-image: url("../img/trash.svg");
+			}
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background-color: #f3f3f3;
+		margin: 0 auto;
+		padding: 12px 32px;
+		color: #323232;
+
+		&::after {
+			content: "";
+			display: block;
+			background: url("../img/plus.svg") center center;
+			filter: brightness(0) saturate(100%) invert(77%) sepia(8%) saturate(10%)
+				hue-rotate(20deg) brightness(87%) contrast(87%);
+			background-size: contain;
+			width: 24px;
+			height: 24px;
+			border: 2px solid #a8a8a8;
+			border-radius: 50%;
+			padding: 6px;
+		}
+	}
+}

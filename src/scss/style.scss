@@ -1,13 +1,11 @@
 @use "sass:math";
 
-// Import mixins
+// Import fonts from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&display=swap');
 @import "base/mixins";
 
-// Import fonts from google fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-
 // Set general font
-$fontFamily: "Roboto";
+$fontFamily: "Kalam";
 // Set general font size
 $fontSize: 16px;
 // Set general colors
@@ -56,6 +54,7 @@ html {
 
 
 body {
+	background-color: #efefef;
 	// Scroll blocked
 	&._lock {
 		overflow: hidden;
@@ -108,12 +107,7 @@ body {
 
 // Null
 @import "base/null";
-
-// Import components styles
-@import "base";
-
-// Import general project styles
-@import "common";
+@import "base/form";
 
 // Import separates blocks styles
 @import "header";

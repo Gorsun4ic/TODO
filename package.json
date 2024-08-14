@@ -9,7 +9,8 @@
     "build": "gulp build --build",
     "svgSprive": "gulp svgSprive",
     "zip": "gulp deployZIP --build",
-    "deploy": "gulp deployFTP --build"
+    "deploy": "gulp deployFTP --build",
+    "test": "jest"
   },
   "author": "Gorsun4ik",
   "license": "ISC",
@@ -34,6 +35,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^6.0.0",
+    "jest": "^29.7.0",
     "sass": "^1.69.5",
     "vinyl-ftp": "^0.6.1"
   },
